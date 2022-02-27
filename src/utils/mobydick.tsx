@@ -1,4 +1,4 @@
-﻿MOBY DICK;
+﻿const exampleText: string = `MOBY DICK;
 
 
 or, THE WHALE.
@@ -22255,5 +22255,6 @@ they glided by as if with padlocks on their mouths; the savage sea-hawks
 sailed with sheathed beaks. On the second day, a sail drew near, nearer,
 and picked me up at last. It was the devious-cruising Rachel, that in
 her retracing search after her missing children, only found another
-orphan.
+orphan.`
 
+export default exampleText;
