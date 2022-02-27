@@ -29,3 +29,4 @@ A pregenerated list of stop words will be used including single characters and n
 - Could logic be done on backend server and sent to UI for faster browser computation? Serverless?
 - Should visibility for certain components be togglable on mobile view?
 - Could programmatic text be ignored to enable reading code files for SEO and keyword tracking?
+- What further styling and UI optimization could be done to increase ease of use and/or reduce styling bloat?
