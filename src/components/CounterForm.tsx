@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-escape */
 import React, { useState } from "react";
+import exampleText from "../utils/mobydick";
+import exampleStops from "../utils/stop-words";
 
 /**
  * Renders the list of words and their counts
@@ -7,11 +9,14 @@ import React, { useState } from "react";
 const ResultList = ({ countList }: any): any => {
   return (
     <div>
-      {Object.keys(countList).map((key) => (
-        <p>
-          {key}: {countList[key]}
-        </p>
-      ))}
+      {Object.keys(countList)
+        .sort((a, b) => countList[b] - countList[a])
+        .slice(0, 100)
+        .map((key) => (
+          <p>
+            {key}: {countList[key]}
+          </p>
+        ))}
     </div>
   );
 };
@@ -26,8 +31,8 @@ export const CounterForm = () => {
    * they appear, excluding all words in the stopWords string
    */
   const getWordCount = (text: string, stopWords: string) => {
-    const list = text.match(/[\w\d\’\'-]+/gi);
-    const stopList = stopWords.match(/[\w\d\’\'-]+/gi);
+    const list = text.toLowerCase().match(/[\w\d\’\'-]+/gi);
+    const stopList = stopWords.toLowerCase().match(/[\w\d\’\'-]+/gi);
     let result: { [key: string]: number } = {};
 
     list?.forEach((word) => {
@@ -65,12 +70,7 @@ export const CounterForm = () => {
         >
           Count Words
         </button>
-        <button
-          type="submit"
-          onClick={() => {
-            
-          }}
-        >
+        <button type="submit" onClick={() => {getWordCount(exampleText, exampleStops)}}>
           Get Example
         </button>
       </div>

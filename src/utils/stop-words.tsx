@@ -1,16 +1,5 @@
-# Freely available stopword list.  This stopword
 
-# list provides a nice balance between coverage
-
-# and size.
-
-#
-
-#
-
-#
-
-a
+const exampleStops: string = `a
 
 about
 
@@ -866,4 +855,6 @@ your
 
 yours
 
-z
+z`
+
+export default exampleStops;
