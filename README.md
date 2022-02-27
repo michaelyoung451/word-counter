@@ -21,6 +21,11 @@ Individual words can be removed from the list or the entire list can be cleared.
 Pressing the 'Get Example' button will run the program using Herman Melville's Moby Dick as the input.
 A pregenerated list of stop words will be used including single characters and non-contentful words.
 
+### Continuous Integration with AWS Amplify
+
+This repository is linked to AWS Amplify and latest commits and changes can be viewed at:
+https://main.d3ac5b630sklqv.amplifyapp.com/
+
 # Future Considerations
 
 - Should the app enable reading .txt files directly? .doc/docx?
